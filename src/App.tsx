@@ -4,7 +4,7 @@ import Timeline from './components/timeline.tsx'
 import EventModal from './components/EventModal.tsx'
 import FilterPanel from './components/FilterPanel.tsx'
 
-// Define the Event interface
+
 interface Event {
   title: string
   year: string | number
@@ -12,7 +12,6 @@ interface Event {
   imageURL: string
 }
 
-// change to '/events.json' if your file lives in /public
 const EVENTS_URL = './events.json'
 
 export default function App() {
