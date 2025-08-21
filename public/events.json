@@ -1,0 +1,51 @@
+[
+    {
+        "year": "1927",
+        "title": "First Electronic TV",
+        "description": "Philo Farnsworth successfully demonstrated the world's first all-electronic television.",
+        "imageURL": "/src/assets/crt.jpeg",
+        "category": "Invention"
+    },
+    {
+        "year": "1954",
+        "title": "First Color TV",
+        "description": "RCA introduced the CT-100, the first mass-produced color television set.",
+        "imageURL": "/src/assets/led.jpg",
+        "category": "Innovation"
+    },
+    {
+        "year": "1997",
+        "title": "Flat Panel TV",
+        "description": "Pioneer introduced the first consumer plasma TV, marking the beginning of the flat-screen era.",
+        "imageURL": "/src/assets/flat_paneltv.jpg",
+        "category": "Flat Screen"
+    },
+    {
+        "year": "2007",
+        "title": "OLED TV",
+        "description": "Sony released the XEL-1, the first TV using OLED technology, known for its perfect blacks.",
+        "imageURL": "/src/assets/oled.jpg",
+        "category": "Modern"
+    },
+    {
+        "year": "2013",
+        "title": "4K UHD TV",
+        "description": "Ultra HD TVs with four times the resolution of Full HD became more common.",
+        "imageURL": "/src/assets/4k-tv.jpg",
+        "category": "Resolution"
+    },
+    {
+        "year": "2018",
+        "title": "8K TV",
+        "description": "8K TVs entered the market, offering even higher resolution than 4K.",
+        "imageURL": "/src/assets/8k-tv.jpg",
+        "category": "Resolution"
+    },
+    {
+        "year": "2020",
+        "title": "Rollable TV",
+        "description": "LG introduced the world's first rollable OLED TV, a flexible screen that can retract into its base.",
+        "imageURL": "/src/assets/rollable-tv.jpg",
+        "category": "Futuristic"
+    }
+]
