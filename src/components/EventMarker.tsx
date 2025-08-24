@@ -8,18 +8,25 @@ interface Event {
 interface EventMarkerProps {
   event: Event
   onClick: () => void
+  isActive?: boolean
 }
 
-export default function EventMarker({ event, onClick }: EventMarkerProps) {
+export default function EventMarker({ event, onClick, isActive = false }: EventMarkerProps) {
   return (
     <div
       className="timeline-event"
       role="button"
       tabIndex={0}
+      aria-current={isActive}
       onClick={onClick}
-      onKeyDown={(e) => e.key === 'Enter' && onClick()}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          onClick()
+        }
+      }}
     >
-      <div className="event-dot" aria-hidden></div>
+      <div className="event-dot" aria-hidden="true"></div>
       <h3>{event.title}</h3>
       <p className="muted">{event.year}</p>
       <img src={event.imageURL} alt={event.title} loading="lazy" />
