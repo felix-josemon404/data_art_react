@@ -10,13 +10,19 @@ interface Event {
 interface TimelineProps {
   events: Event[]
   onSelect: (event: Event) => void
+  selectedEvent?: Event | null
 }
 
-export default function Timeline({ events, onSelect }: TimelineProps) {
+export default function Timeline({ events, onSelect, selectedEvent }: TimelineProps) {
   return (
     <section id="timeline" className="timeline-grid">
       {events.map((ev, idx) => (
-        <EventMarker key={idx} event={ev} onClick={() => onSelect(ev)} />
+        <EventMarker 
+          key={idx} 
+          event={ev} 
+          onClick={() => onSelect(ev)}
+          isActive={selectedEvent?.title === ev.title && selectedEvent?.year === ev.year}
+        />
       ))}
     </section>
   )

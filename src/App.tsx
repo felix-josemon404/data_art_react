@@ -4,7 +4,6 @@ import Timeline from './components/timeline.tsx'
 import EventModal from './components/EventModal.tsx'
 import FilterPanel from './components/FilterPanel.tsx'
 
-// Define the Event interface
 interface Event {
   title: string
   year: string | number
@@ -12,7 +11,6 @@ interface Event {
   imageURL: string
 }
 
-// change to '/events.json' if your file lives in /public
 const EVENTS_URL = './events.json'
 
 export default function App() {
@@ -43,7 +41,11 @@ export default function App() {
           <p>The years and timeline</p>
         </nav>
 
-        <Timeline events={events} onSelect={(ev) => setSelected(ev)} />
+        <Timeline 
+          events={events} 
+          onSelect={(ev) => setSelected(ev)}
+          selectedEvent={selected}
+        />
       </main>
 
       <EventModal event={selected} onClose={() => setSelected(null)} />
